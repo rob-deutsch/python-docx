@@ -13,6 +13,10 @@ class CT_BrBuilder(BaseBuilder):
     __nspfxs__ = ('w',)
     __attrs__ = ('w:type', 'w:clear')
 
+class CT_NBHyphenBuilder(BaseBuilder):
+    __tag__ = 'w:noBreakHyphen'
+    __nspfxs__ = ('w',)
+    __attrs__ = ()
 
 class CT_EmptyBuilder(BaseBuilder):
     __nspfxs__ = ('w',)

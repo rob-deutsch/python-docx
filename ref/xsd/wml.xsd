@@ -1666,6 +1666,7 @@
     <xsd:attribute name="type" type="ST_BrType" use="optional"/>
     <xsd:attribute name="clear" type="ST_BrClear" use="optional"/>
   </xsd:complexType>
+  <xsd:complexType name="NBHyphen"/>
   <xsd:simpleType name="ST_PTabAlignment">
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="left"/>
@@ -1748,7 +1749,7 @@
       <xsd:element name="delText" type="CT_Text"/>
       <xsd:element name="instrText" type="CT_Text"/>
       <xsd:element name="delInstrText" type="CT_Text"/>
-      <xsd:element name="noBreakHyphen" type="CT_Empty"/>
+      <xsd:element name="noBreakHyphen" type="CT_NBHyphen"/>
       <xsd:element name="softHyphen" type="CT_Empty" minOccurs="0"/>
       <xsd:element name="dayShort" type="CT_Empty" minOccurs="0"/>
       <xsd:element name="monthShort" type="CT_Empty" minOccurs="0"/>

@@ -18,6 +18,11 @@ class CT_Br(BaseOxmlElement):
     type = OptionalAttribute('w:type', ST_BrType)
     clear = OptionalAttribute('w:clear', ST_BrClear)
 
+class CT_NBHyphen(BaseOxmlElement):
+    """
+    ``<w:noBreakHyphen>`` element, indicating a non-breaking hyphen in a run.
+    """
+    pass
 
 class CT_R(BaseOxmlElement):
     """
@@ -29,6 +34,7 @@ class CT_R(BaseOxmlElement):
     cr = ZeroOrMore('w:cr')
     tab = ZeroOrMore('w:tab')
     drawing = ZeroOrMore('w:drawing')
+    nbHyphen = ZeroOrMore('w:noBreakHyphen')
 
     def _insert_rPr(self, rPr):
         self.insert(0, rPr)
@@ -96,6 +102,8 @@ class CT_R(BaseOxmlElement):
                 text += '\t'
             elif child.tag in (qn('w:br'), qn('w:cr')):
                 text += '\n'
+            elif child.tag == qn('w:noBreakHyphen'):
+                text += '-'
         return text
 
     @text.setter

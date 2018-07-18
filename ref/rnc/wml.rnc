@@ -1051,6 +1051,7 @@ w_ST_BrClear =
 w_CT_Br =
   attribute w:type { w_ST_BrType }?,
   attribute w:clear { w_ST_BrClear }?
+w_CT_NBHyphen = empty
 w_ST_PTabAlignment = string "left" | string "center" | string "right"
 w_ST_PTabRelativeTo = string "margin" | string "indent"
 w_ST_PTabLeader =
@@ -1097,7 +1098,7 @@ w_EG_RunInnerContent =
   | element delText { w_CT_Text }
   | element instrText { w_CT_Text }
   | element delInstrText { w_CT_Text }
-  | element noBreakHyphen { w_CT_Empty }
+  | element noBreakHyphen { w_CT_NBHyphen }
   | element softHyphen { w_CT_Empty }?
   | element dayShort { w_CT_Empty }?
   | element monthShort { w_CT_Empty }?

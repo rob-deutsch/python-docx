@@ -96,7 +96,7 @@ Schema excerpt
       <xsd:element name="ptab"                  type="CT_PTab"/>
       <xsd:element name="softHyphen"            type="CT_Empty"/>
       <xsd:element name="contentPart"           type="CT_Rel"/>
-      <xsd:element name="noBreakHyphen"         type="CT_Empty"/>
+      <xsd:element name="noBreakHyphen"         type="CT_NBHyphen"/>
       <xsd:element name="fldChar"               type="CT_FldChar"/>
       <xsd:element name="instrText"             type="CT_Text"/>
       <xsd:element name="dayShort"              type="CT_Empty"/>

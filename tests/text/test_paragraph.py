@@ -235,6 +235,7 @@ class DescribeParagraph(object):
         ('w:p/w:r/(w:t"foo", w:tab, w:t"bar")', 'foo\tbar'),
         ('w:p/w:r/(w:t"foo", w:br,  w:t"bar")', 'foo\nbar'),
         ('w:p/w:r/(w:t"foo", w:cr,  w:t"bar")', 'foo\nbar'),
+        ('w:p/w:r/(w:t"foo", w:noBreakHyphen,  w:t"bar")', 'foo-bar'),
     ])
     def text_get_fixture(self, request):
         p_cxml, expected_text_value = request.param

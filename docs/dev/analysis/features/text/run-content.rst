@@ -13,6 +13,7 @@ main content child elements:
 * <w:drawing>
 * <w:tab>
 * <w:cr>
+* <w:noBreakHyphen>
 
 
 Schema excerpt
@@ -40,7 +41,7 @@ Schema excerpt
       <xsd:element name="tab"                   type="CT_Empty"/>
       <xsd:element name="ptab"                  type="CT_PTab"/>
       <xsd:element name="sym"                   type="CT_Sym"/>
-      <xsd:element name="noBreakHyphen"         type="CT_Empty"/>
+      <xsd:element name="noBreakHyphen"         type="CT_NBHyphen"/>
       <xsd:element name="softHyphen"            type="CT_Empty"/>
       <xsd:element name="fldChar"               type="CT_FldChar"/>
       <xsd:element name="drawing"               type="CT_Drawing"/>

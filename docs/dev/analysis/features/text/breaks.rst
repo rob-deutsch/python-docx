@@ -171,6 +171,20 @@ Word loads the following simplified form fine ... ::
       </w:r>
     </w:p>
 
+Nonbreaking Hyphen
+~~~~~~~~~~
+
+This XML is produced by Word after inserting a nonbreaking hyphen with Ctrl+_:
+
+    <w:p>
+      <w:r>
+        <w:t>Text before</w:t>
+      </w:r>
+      <w:r>
+        <w:noBreakHyphen/>
+        <w:t>and after nonbreaking hyphen</w:t>
+      </w:r>
+    </w:p>
 
 Schema excerpt
 --------------
@@ -197,7 +211,7 @@ Schema excerpt
       <xsd:element name="delText"               type="CT_Text"/>
       <xsd:element name="instrText"             type="CT_Text"/>
       <xsd:element name="delInstrText"          type="CT_Text"/>
-      <xsd:element name="noBreakHyphen"         type="CT_Empty"/>
+      <xsd:element name="noBreakHyphen"         type="CT_NBHyphen"/>
       <xsd:element name="softHyphen"            type="CT_Empty"/>
       <xsd:element name="dayShort"              type="CT_Empty"/>
       <xsd:element name="monthShort"            type="CT_Empty"/>
@@ -226,6 +240,9 @@ Schema excerpt
       <xsd:element name="lastRenderedPageBreak" type="CT_Empty"/>
     </xsd:choice>
   </xsd:group>
+
+  <xsd:complexType name="CT_NBHyphen">
+  </xsd:complexType>
 
   <xsd:complexType name="CT_Br">
     <xsd:attribute name="type"  type="ST_BrType"/>
